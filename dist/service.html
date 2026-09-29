@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="AI 여행 컨시어지와 실시간 동적 재계획 서비스 소개">
+  <title>서비스 · AI Learning Archive</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="service-page">
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header">
+    <a class="brand" href="introduce.html"><span class="brand-mark">A</span><span>AI Learning Archive</span></a>
+    <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false">☰</button>
+    <nav aria-label="주 메뉴"><ul class="nav-list">
+      <li><a href="introduce.html">PROM RECORD</a></li><li><a href="article.html">기사</a></li><li><a href="service.html" aria-current="page">서비스</a></li><li><a href="image.html">이미지</a></li><li><a href="video.html">영상</a></li><li><a href="final.html">Final project</a></li>
+    </ul></nav>
+  </header>
+  <main id="main" class="service-stage">
+    <section class="service-hero" aria-labelledby="service-title">
+      <div><p class="eyebrow">Service Record · Travel AI</p><h1 id="service-title">여행은,<br>계획대로<br>흘러가지 않으니까.</h1></div>
+      <div class="service-hero-copy"><p>취향·시간·예산·이동수단을 반영해 일정을 만들고, 날씨나 돌발 상황이 생기면 남은 동선을 다시 설계하는 AI 여행 컨시어지입니다.</p><a class="service-launch" href="https://travel-platform-gray.vercel.app/" target="_blank" rel="noopener noreferrer">실제 서비스 새 창에서 보기</a></div>
+    </section>
+    <section class="service-showcase" aria-label="여행 서비스 소개와 라이브 미리보기">
+      <div class="service-story">
+        <article class="service-summary"><span>Triply · Smart Travel Planner</span><h2>나에게 맞는 일정부터<br>예상 밖의 Plan B까지</h2><p>출발 전에는 맞춤 여행을 설계하고, 여행 중에는 실시간 상황을 읽어 다음 선택을 제안합니다.</p></article>
+        <div class="service-feature-grid">
+          <article class="service-feature"><strong>01</strong><h3>취향 기반 일정 생성</h3><p>목적지, 기간, 동행자, 이동수단, 예산과 여행 스타일을 조합해 최적 동선을 설계합니다.</p></article>
+          <article class="service-feature"><strong>02</strong><h3>실시간 상황 인지</h3><p>강수 확률과 이동 위험을 감지해 지금 바꿔야 할 일정과 가까운 실내 대안을 알려줍니다.</p></article>
+          <article class="service-feature"><strong>03</strong><h3>예약은 지키고 동선은 유연하게</h3><p>예약처럼 반드시 유지해야 하는 조건은 고정한 채, 남은 시간과 이동 거리를 다시 계산해 Plan B를 만듭니다.</p></article>
+        </div>
+      </div>
+      <aside class="live-service" aria-label="실제 여행 서비스 라이브 화면">
+        <p class="live-service-label">Live Preview · 화면 안에서 직접 둘러볼 수 있습니다</p>
+        <div class="device-frame"><div class="device-bar" aria-hidden="true"><span class="device-notch"></span></div><div class="device-screen"><iframe src="https://travel-platform-gray.vercel.app/" title="Triply AI 여행 컨시어지 실제 서비스" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="clipboard-read; clipboard-write" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe></div></div>
+        <p class="service-note">모바일 여행 서비스 화면을 그대로 불러오는 라이브 프리뷰입니다.</p>
+      </aside>
+    </section>
+  </main>
+  <footer class="site-footer"><span>AI Learning Archive</span><span>© <span data-year></span> 한국경제 AI 교육 포트폴리오</span></footer>
+</body>
+</html>
