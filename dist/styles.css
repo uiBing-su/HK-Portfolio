@@ -309,6 +309,15 @@ button, input, textarea, select { font: inherit; }
 .artwork.three::before { width: 75%; height: 12%; background: #355e4a; transform: rotate(-24deg); box-shadow: 0 34px 0 #9eb57d, 0 -34px 0 #c4d49b; }
 .artwork.four { background: repeating-linear-gradient(90deg, #416e55 0 18px, #b9cb97 18px 36px, #f8f3d9 36px 54px); }
 .artwork span { position: relative; z-index: 1; color: white; font-size: clamp(1.8rem, 4vw, 3.8rem); text-shadow: 0 2px 16px rgba(0,0,0,.18); }
+.artwork.travel-art { background: #160d34; }
+.artwork.travel-art::before, .artwork.travel-art::after { display: none; }
+.artwork.travel-art img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.artwork.poster-art, .artwork.square-art { aspect-ratio: 1 / 1; }
+.artwork.portrait-art, .artwork.illustration-art { aspect-ratio: 3 / 4; }
+.artwork.poster-art img { object-position: center; }
+.artwork.square-art img { object-position: center; }
+.artwork.portrait-art img { object-position: center; }
+.artwork.illustration-art img { object-position: center; }
 .polaroid figcaption { display: flex; justify-content: space-between; gap: 12px; margin-top: 14px; font-size: .9rem; }
 .polaroid figcaption span:last-child { color: #829087; font-size: .8rem; }
 .polaroid[hidden] { display: none; }
