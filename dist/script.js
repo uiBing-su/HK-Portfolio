@@ -33,7 +33,7 @@ const canShowCursorTrail = window.matchMedia('(hover: hover) and (pointer: fine)
   && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 if (canShowCursorTrail) {
-  const sparkColors = ['#315c47', '#6f955a', '#a9bd89', '#dfe9d3', '#fffbe8'];
+  const sparkColors = ['#6f4cff', '#a76dff', '#d0a8ff', '#54d7e8', '#ff7f9b', '#fff7ff'];
   let lastSparkTime = 0;
 
   window.addEventListener('pointermove', (event) => {

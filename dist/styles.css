@@ -425,3 +425,146 @@ button, input, textarea, select { font: inherit; }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } .cursor-spark { display: none; } }
+
+/* 2026 campaign refresh · violet night travel archive */
+:root {
+  --ink: #fbf8ff;
+  --forest: #7048e8;
+  --sage: #b985ff;
+  --leaf: #60d4e5;
+  --mist: #10072a;
+  --paper: #211449;
+  --line: rgba(211, 185, 255, .25);
+  --shadow: 0 24px 70px rgba(4, 0, 24, .46), 0 0 36px rgba(139, 84, 255, .13);
+  --leaf-cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' shape-rendering='crispEdges'%3E%3Crect x='14' y='2' width='6' height='4' fill='%23d0a8ff'/%3E%3Crect x='10' y='6' width='12' height='4' fill='%23b985ff'/%3E%3Crect x='6' y='10' width='16' height='4' fill='%23935cff'/%3E%3Crect x='6' y='14' width='12' height='4' fill='%237048e8'/%3E%3Crect x='10' y='18' width='8' height='4' fill='%237048e8'/%3E%3Crect x='14' y='22' width='4' height='4' fill='%2354d7e8'/%3E%3Crect x='18' y='18' width='4' height='4' fill='%2354d7e8'/%3E%3Crect x='22' y='22' width='4' height='4' fill='%2354d7e8'/%3E%3C/svg%3E") 5 5, auto;
+}
+
+body {
+  color: var(--ink);
+  background: #10072a;
+  background-image: radial-gradient(circle at 15% 8%, rgba(125,72,232,.22), transparent 32%), radial-gradient(circle at 90% 22%, rgba(74,211,229,.12), transparent 27%);
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(circle, rgba(255,255,255,.45) 0 1px, transparent 1.5px);
+  background-size: 70px 70px;
+  opacity: .12;
+}
+.site-header {
+  border-color: rgba(222,199,255,.3);
+  background: rgba(22, 11, 57, .8);
+  color: #fff;
+  box-shadow: 0 12px 40px rgba(4,0,25,.28);
+}
+.brand-mark { background: linear-gradient(135deg, #ff6f91, #8a55ff 54%, #4ed7e7); box-shadow: 0 0 20px rgba(170,98,255,.55); }
+.nav-list a { color: #d9c9f5; }
+.nav-list a:hover, .nav-list a[aria-current="page"] { color: #fff; background: linear-gradient(135deg, rgba(160,91,255,.54), rgba(77,210,230,.22)); box-shadow: inset 0 0 0 1px rgba(255,255,255,.12); }
+.menu-toggle { color: #fff; background: #7048e8; }
+.eyebrow { color: #d4a8ff; }
+.eyebrow::before { box-shadow: 0 0 12px currentColor; }
+.site-footer { border-color: rgba(220,199,255,.22); color: #aa9bc8; }
+
+.article-page {
+  background-color: #10072a;
+  background-image: linear-gradient(rgba(15,7,41,.76), rgba(15,7,41,.93)), url('assets/cosmic-archive.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.article-cover { border-color: rgba(214,185,255,.34); background: rgba(25,12,63,.8); box-shadow: var(--shadow); border-radius: 26px; }
+.article-main { background-image: linear-gradient(130deg, rgba(49,23,118,.5), rgba(111,72,232,.35)), url('assets/cosmic-archive.png'); background-size: cover; background-position: center; }
+.article-main::after { border-color: rgba(106,217,235,.52); box-shadow: 0 0 34px rgba(84,215,232,.25); }
+.article-lede, .article-meta { color: #e4d8f6; }
+.article-side { background: linear-gradient(180deg, rgba(47,20,103,.96), rgba(17,8,47,.98)); color: #f5efff; }
+.story-card { border-color: rgba(218,190,255,.25); border-radius: 18px; background: rgba(34,19,77,.82); backdrop-filter: blur(16px); box-shadow: 0 12px 38px rgba(3,0,22,.28); }
+.story-card .number { color: #c798ff; }
+.story-card p { color: #bfb0d3; }
+
+.introduce-page {
+  background-color: #10072a;
+  background-image: linear-gradient(rgba(11,5,34,.62), rgba(11,5,34,.9)), url('assets/cosmic-archive.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.record-sheet { border-color: rgba(219,191,255,.42); background: rgba(21,11,54,.88); box-shadow: 12px 14px 0 rgba(111,72,232,.48), var(--shadow); backdrop-filter: blur(18px); }
+.identity-panel { background: linear-gradient(160deg, #7c47eb, #3b176e 54%, #16103e); }
+.record-number, .identity-foot { color: #dacaf0; }
+.profile-stamp { border-color: rgba(255,255,255,.82); box-shadow: 0 0 40px rgba(197,144,255,.28); }
+.record-content { color: #fbf8ff; }
+.record-intro, .record-card p { color: #c6b8d9; }
+.record-card { border-color: rgba(218,190,255,.24); border-radius: 18px; background: linear-gradient(145deg, rgba(82,41,150,.4), rgba(28,15,66,.72)); }
+.record-card span { color: #d0a8ff; }
+.keyword-list em { color: #f7f2ff; background: linear-gradient(135deg, rgba(134,77,238,.72), rgba(65,194,218,.38)); }
+.featured-youtube { border-color: rgba(218,190,255,.4); background: rgba(24,12,59,.9); box-shadow: 8px 9px 0 rgba(111,72,232,.48), var(--shadow); }
+.featured-video-label span { color: #ce9fff; }
+
+.service-page {
+  background-color: #11082d;
+  background-image: linear-gradient(180deg, rgba(12,5,38,.48), rgba(12,5,38,.94) 72%), url('assets/violet-travel-night.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center top;
+}
+.service-hero { min-height: 560px; border-color: rgba(223,201,255,.4); background: linear-gradient(105deg, rgba(20,10,56,.93), rgba(72,32,132,.38)); box-shadow: 10px 12px 0 rgba(121,70,225,.45), var(--shadow); backdrop-filter: blur(10px); }
+.service-hero-copy p { color: #d5c8e7; }
+.service-launch { border-color: #b878ff; background: linear-gradient(135deg, #8a4cff, #db5ccf); box-shadow: 4px 5px 0 #4c268f, 0 0 24px rgba(186,101,255,.3); }
+.service-summary { border-color: rgba(211,185,255,.32); background: linear-gradient(145deg, #51239a, #231050); box-shadow: var(--shadow); }
+.service-summary span { color: #7de2eb; }
+.service-summary p { color: #d8cbea; }
+.service-feature { border-color: rgba(218,190,255,.26); background: rgba(27,14,65,.88); backdrop-filter: blur(16px); }
+.service-feature strong { color: #fff; background: linear-gradient(135deg, #994fff, #4ed7e7); box-shadow: 0 0 20px rgba(108,202,233,.22); }
+.service-feature p, .live-service-label, .service-note { color: #bfb1d1; }
+.device-frame { border-color: #a76dff; background: linear-gradient(160deg, #7048e8, #28114f); box-shadow: 0 18px 60px rgba(5,0,28,.55), 0 0 34px rgba(160,92,255,.26); }
+
+.image-page { background-color: #10072a; background-image: linear-gradient(rgba(13,6,40,.72), rgba(13,6,40,.9)), url('assets/cosmic-archive.png'); background-size: cover; background-attachment: fixed; }
+.memo-panel { color: #fff; border-color: rgba(218,190,255,.44); background: rgba(24,12,59,.92); box-shadow: 7px 8px 0 rgba(111,72,232,.54), var(--shadow); backdrop-filter: blur(16px); }
+.memo-panel::before { background: #ff7f9b; box-shadow: 0 0 18px rgba(255,127,155,.55); }
+.memo-kicker { color: #ce9fff; }
+.memo-panel p, .filter-button { color: #bfb1d1; }
+.filter-button { border-color: rgba(220,199,255,.18); }
+.filter-button.active, .filter-button:hover { color: #fff; }
+.polaroid { color: #1c0f3d; border-color: rgba(213,186,255,.42); background: #f8f2ff; box-shadow: 0 16px 40px rgba(2,0,20,.42); }
+.tape::before { background: rgba(174,116,255,.72); }
+
+.video-page { background-color: #10072a; background-image: linear-gradient(rgba(12,5,38,.65), rgba(12,5,38,.92)), url('assets/violet-travel-night.png'); background-size: cover; background-attachment: fixed; background-position: center; }
+.browser-shell { border-color: #8857f0; background: rgba(18,9,48,.9); box-shadow: var(--shadow); backdrop-filter: blur(14px); }
+.browser-bar { border-color: #8857f0; background: linear-gradient(90deg, #4d2493, #773dd0); }
+.browser-dot { background: #d4a8ff; box-shadow: 0 0 10px rgba(212,168,255,.55); }
+.browser-address { background: rgba(255,255,255,.16); }
+.video-heading p, .episode p { color: #bfb1d1; }
+.featured-video { background: linear-gradient(145deg, #4d2493, #160b3d); box-shadow: 0 18px 50px rgba(4,0,25,.38); }
+.video-screen { background: linear-gradient(135deg, rgba(176,94,255,.45), rgba(35,9,82,.75)), url('assets/cosmic-archive.png'); background-size: cover; }
+.video-copy p { color: #d9cdea; }
+.episode { border-color: rgba(218,190,255,.25); background: rgba(31,16,72,.84); }
+.episode span { color: #ca99ff; }
+
+.final-page { background-color: #0d0625; background-image: linear-gradient(rgba(10,4,30,.56), rgba(10,4,30,.9)), url('assets/cosmic-archive.png'); background-size: cover; background-attachment: fixed; background-position: center; }
+.final-page .site-header { color: #fff; }
+.final-hero { color: #fff; background: rgba(22,10,56,.88); border: 1px solid rgba(221,197,255,.32); box-shadow: var(--shadow); backdrop-filter: blur(14px); }
+.final-intro .lead { color: #c7b9da; }
+.project-tags span { border-color: rgba(219,193,255,.28); background: rgba(139,78,242,.18); }
+.final-visual { background-image: linear-gradient(145deg, rgba(121,63,224,.35), rgba(24,8,58,.38)), url('assets/violet-travel-night.png'); background-size: cover; background-position: center; }
+.final-visual::before { border-color: rgba(112,220,235,.6); }
+.final-visual::after { background: rgba(202,154,255,.6); filter: blur(2px); }
+.visual-card { color: #fff; border-color: rgba(255,255,255,.32); background: rgba(30,13,72,.72); box-shadow: 18px 18px 0 rgba(105,59,199,.38); }
+.visual-card small, .section-head p, .process-item p { color: #c6b8d9; }
+.process-grid, .process-item { border-color: rgba(222,198,255,.2); }
+.process-item span { color: #cc9cff; }
+.final-page .site-footer { color: #ad9fc1; border-color: rgba(223,201,255,.18); }
+
+.music-toggle { border-color: #9d62ff; background: rgba(23,11,59,.94); color: #f8f3ff; box-shadow: 5px 6px 0 #4f2494, 0 0 22px rgba(171,102,255,.25); }
+.music-toggle:hover { box-shadow: 5px 8px 0 #4f2494, 0 0 28px rgba(171,102,255,.36); }
+.music-toggle[aria-pressed="true"] { background: linear-gradient(135deg, #8a4cff, #cf5fd0); color: #fff; }
+.music-note, .music-toggle[aria-pressed="true"] .music-note { background: #f0e5ff; color: #6c3bd0; }
+.service-launch:focus-visible, .music-toggle:focus-visible { outline-color: #64dcea; }
+
+@media (max-width: 980px) {
+  .menu-toggle { display: grid; place-items: center; }
+  .nav-list { display: none; position: absolute; top: calc(100% + 8px); left: 0; right: 0; padding: 10px; background: rgba(20,9,53,.98); border: 1px solid rgba(216,190,255,.28); border-radius: 18px; box-shadow: var(--shadow); }
+  .nav-list.open { display: grid; }
+}
