@@ -1,0 +1,162 @@
+{
+  "kind": "sprite-gen-slice-sheet",
+  "version": 1,
+  "sheet": "action-row.png",
+  "grid": [
+    5,
+    1
+  ],
+  "canvas": {
+    "w": 192,
+    "h": 192
+  },
+  "baseline_y": 184.0,
+  "target_height": 156.0,
+  "scale": "cell",
+  "fit": "contain",
+  "factor": null,
+  "factor_from": null,
+  "alpha_cleanup": "action-alpha-cleanup.json",
+  "cells": [
+    {
+      "name": "cheer",
+      "file": "action-cheer.png",
+      "factor": 0.5342465753424658,
+      "factor_from": "target_height",
+      "subject": {
+        "sheet": {
+          "w": 218,
+          "h": 292
+        },
+        "canvas": {
+          "w": 116,
+          "h": 156
+        }
+      },
+      "box": {
+        "x": 28,
+        "y": 28,
+        "w": 127,
+        "h": 156
+      },
+      "anchor": [
+        96.591,
+        184.0
+      ],
+      "clipped_px": 0,
+      "parts": 4
+    },
+    {
+      "name": "wink",
+      "file": "action-wink.png",
+      "factor": 0.5397923875432526,
+      "factor_from": "target_height",
+      "subject": {
+        "sheet": {
+          "w": 210,
+          "h": 289
+        },
+        "canvas": {
+          "w": 113,
+          "h": 156
+        }
+      },
+      "box": {
+        "x": 29,
+        "y": 28,
+        "w": 124,
+        "h": 156
+      },
+      "anchor": [
+        96.391,
+        184.0
+      ],
+      "clipped_px": 0,
+      "parts": 2
+    },
+    {
+      "name": "question",
+      "file": "action-question.png",
+      "factor": 0.5360824742268041,
+      "factor_from": "target_height",
+      "subject": {
+        "sheet": {
+          "w": 197,
+          "h": 291
+        },
+        "canvas": {
+          "w": 106,
+          "h": 156
+        }
+      },
+      "box": {
+        "x": 43,
+        "y": 14,
+        "w": 111,
+        "h": 170
+      },
+      "anchor": [
+        95.819,
+        184.0
+      ],
+      "clipped_px": 0,
+      "parts": 3
+    },
+    {
+      "name": "celebrate",
+      "file": "action-celebrate.png",
+      "factor": 0.5473684210526316,
+      "factor_from": "target_height",
+      "subject": {
+        "sheet": {
+          "w": 204,
+          "h": 285
+        },
+        "canvas": {
+          "w": 112,
+          "h": 156
+        }
+      },
+      "box": {
+        "x": 40,
+        "y": 28,
+        "w": 122,
+        "h": 156
+      },
+      "anchor": [
+        96.054,
+        184.0
+      ],
+      "clipped_px": 0,
+      "parts": 3
+    },
+    {
+      "name": "sit",
+      "file": "action-sit.png",
+      "factor": 0.5611510791366906,
+      "factor_from": "target_height",
+      "subject": {
+        "sheet": {
+          "w": 247,
+          "h": 278
+        },
+        "canvas": {
+          "w": 139,
+          "h": 156
+        }
+      },
+      "box": {
+        "x": 27,
+        "y": 28,
+        "w": 139,
+        "h": 156
+      },
+      "anchor": [
+        96.5,
+        184.0
+      ],
+      "clipped_px": 0,
+      "parts": 1
+    }
+  ]
+}

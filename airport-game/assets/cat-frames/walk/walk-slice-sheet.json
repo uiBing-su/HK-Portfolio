@@ -1,0 +1,134 @@
+{
+  "kind": "sprite-gen-slice-sheet",
+  "version": 1,
+  "sheet": "walk-row.png",
+  "grid": [
+    4,
+    1
+  ],
+  "canvas": {
+    "w": 192,
+    "h": 192
+  },
+  "baseline_y": 184.0,
+  "target_height": 152.0,
+  "scale": "cell",
+  "fit": "contain",
+  "factor": null,
+  "factor_from": null,
+  "alpha_cleanup": "walk-alpha-cleanup.json",
+  "cells": [
+    {
+      "name": "step-1",
+      "file": "walk-step-1.png",
+      "factor": 0.6178861788617886,
+      "factor_from": "target_height",
+      "subject": {
+        "sheet": {
+          "w": 178,
+          "h": 246
+        },
+        "canvas": {
+          "w": 110,
+          "h": 152
+        }
+      },
+      "box": {
+        "x": 41,
+        "y": 32,
+        "w": 110,
+        "h": 152
+      },
+      "anchor": [
+        96.0,
+        184.0
+      ],
+      "clipped_px": 0,
+      "parts": 1
+    },
+    {
+      "name": "step-2",
+      "file": "walk-step-2.png",
+      "factor": 0.6178861788617886,
+      "factor_from": "target_height",
+      "subject": {
+        "sheet": {
+          "w": 176,
+          "h": 246
+        },
+        "canvas": {
+          "w": 109,
+          "h": 152
+        }
+      },
+      "box": {
+        "x": 42,
+        "y": 32,
+        "w": 109,
+        "h": 152
+      },
+      "anchor": [
+        96.5,
+        184.0
+      ],
+      "clipped_px": 0,
+      "parts": 1
+    },
+    {
+      "name": "step-3",
+      "file": "walk-step-3.png",
+      "factor": 0.6178861788617886,
+      "factor_from": "target_height",
+      "subject": {
+        "sheet": {
+          "w": 198,
+          "h": 246
+        },
+        "canvas": {
+          "w": 122,
+          "h": 152
+        }
+      },
+      "box": {
+        "x": 35,
+        "y": 32,
+        "w": 122,
+        "h": 152
+      },
+      "anchor": [
+        96.0,
+        184.0
+      ],
+      "clipped_px": 0,
+      "parts": 1
+    },
+    {
+      "name": "step-4",
+      "file": "walk-step-4.png",
+      "factor": 0.6153846153846154,
+      "factor_from": "target_height",
+      "subject": {
+        "sheet": {
+          "w": 195,
+          "h": 247
+        },
+        "canvas": {
+          "w": 120,
+          "h": 152
+        }
+      },
+      "box": {
+        "x": 36,
+        "y": 32,
+        "w": 120,
+        "h": 152
+      },
+      "anchor": [
+        96.0,
+        184.0
+      ],
+      "clipped_px": 0,
+      "parts": 1
+    }
+  ]
+}

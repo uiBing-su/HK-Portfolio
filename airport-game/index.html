@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#102d35" />
+    <meta name="description" content="도트 고양이 승무원과 함께 끝없이 이어지는 공항을 순찰하는 WASD 미니 게임" />
+    <title>청명공항 순찰</title>
+    <link rel="stylesheet" href="./styles.css?v=9" />
+  </head>
+  <body>
+    <main id="game" class="game is-starting" aria-label="청명공항 무한 횡스크롤 게임" tabindex="0">
+      <div class="background" aria-hidden="true"></div>
+      <div class="sunwash" aria-hidden="true"></div>
+      <div class="mist mist-one" aria-hidden="true"></div>
+      <div class="mist mist-two" aria-hidden="true"></div>
+
+      <header class="hud-top">
+        <section class="quest-card" aria-label="현재 임무">
+          <div class="quest-icon" aria-hidden="true">✦</div>
+          <div>
+            <p class="eyebrow">MISSION · 청명공항</p>
+            <h1>활주로 신호를 모아라</h1>
+            <div class="progress-row">
+              <div class="progress-track"><span id="progressFill"></span></div>
+              <strong id="orbCount">0 / 3</strong>
+            </div>
+          </div>
+        </section>
+
+        <nav class="game-actions" aria-label="게임 메뉴">
+          <button id="soundButton" class="icon-button" type="button" aria-label="소리 켜기 또는 끄기" aria-pressed="true">♪</button>
+          <button id="pauseButton" class="icon-button" type="button" aria-label="게임 일시정지" aria-pressed="false">Ⅱ</button>
+        </nav>
+      </header>
+
+      <section class="controls-card" aria-label="조작 방법">
+        <p class="eyebrow">CONTROLS</p>
+        <div class="wasd" aria-hidden="true">
+          <span></span><kbd data-key="w">W</kbd><span></span>
+          <kbd data-key="a">A</kbd><kbd data-key="s">S</kbd><kbd data-key="d">D</kbd>
+        </div>
+        <p><strong>A D</strong> 이동 · <strong>W</strong> 점프 · <strong>S</strong> 앉기<br /><strong>1–5</strong> 캐릭터 액션</p>
+      </section>
+
+      <div class="location-pill" aria-live="polite">
+        <span class="location-dot"></span>
+        <span id="locationText">국제선 터미널</span>
+      </div>
+
+      <div class="orb orb-one" data-orb="0" aria-label="첫 번째 계곡의 빛"></div>
+      <div class="orb orb-two" data-orb="1" aria-label="두 번째 계곡의 빛"></div>
+      <div class="orb orb-three" data-orb="2" aria-label="세 번째 계곡의 빛"></div>
+
+      <div id="player" class="player" aria-label="고양이 승무원 캐릭터">
+        <div class="player-shadow" aria-hidden="true"></div>
+        <img id="playerSprite" src="./assets/cat-frames/idle/idle-front-a.png?v=3" alt="남색 승무원 제복을 입은 흰 고양이 도트 캐릭터" draggable="false" />
+      </div>
+
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+      <section class="action-bar" aria-label="숫자키 캐릭터 액션">
+        <button type="button" data-action="1" aria-label="1번 환호 액션"><kbd>1</kbd><strong class="action-symbol action-cheer" aria-hidden="true">✦</strong><span>환호</span></button>
+        <button type="button" data-action="2" aria-label="2번 윙크 액션"><kbd>2</kbd><strong class="action-symbol action-wink" aria-hidden="true">&gt;˂</strong><span>윙크</span></button>
+        <button type="button" data-action="3" aria-label="3번 궁금 액션"><kbd>3</kbd><strong class="action-symbol action-question" aria-hidden="true">?</strong><span>궁금</span></button>
+        <button type="button" data-action="4" aria-label="4번 축하 액션"><kbd>4</kbd><strong class="action-symbol action-celebrate" aria-hidden="true">✦</strong><span>축하</span></button>
+        <button type="button" data-action="5" aria-label="5번 앉기 액션"><kbd>5</kbd><strong class="action-symbol action-sit" aria-hidden="true">↧</strong><span>앉기</span></button>
+      </section>
+
+      <section class="mobile-controls" aria-label="터치 조작">
+        <button type="button" data-control="a" aria-label="왼쪽으로 이동">◀</button>
+        <button type="button" data-control="s" aria-label="웅크리기">▼</button>
+        <button type="button" data-control="d" aria-label="오른쪽으로 이동">▶</button>
+        <button type="button" data-control="w" class="jump" aria-label="점프">▲</button>
+      </section>
+
+      <section id="startScreen" class="overlay">
+        <div class="start-panel start-panel-hero">
+          <div class="crest" aria-hidden="true"><span>✈</span></div>
+          <div class="start-kicker" aria-hidden="true">
+            <span></span><p>PIXEL AIRPORT SIDE-SCROLLER</p><span></span>
+          </div>
+          <h2>청명공항 순찰</h2>
+          <p class="start-copy">고양이 승무원 <strong>루미</strong>와 함께<br />끝없이 이어지는 활주로의 신호를 찾아보세요.</p>
+          <button id="startButton" class="primary-button start-button" type="button">
+            <span class="start-play" aria-hidden="true">▶</span><span>순찰 시작</span><span aria-hidden="true">→</span>
+          </button>
+          <div class="start-controls" aria-label="조작 방법">
+            <span><kbd>A</kbd><i>/</i><kbd>D</kbd> 이동</span>
+            <span><kbd>W</kbd> 점프</span>
+            <span><kbd>1–5</kbd> 숫자 캐릭터 액션</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="pauseScreen" class="overlay hidden" aria-hidden="true">
+        <div class="start-panel pause-panel">
+          <div class="pause-crest" aria-hidden="true"><span>✈</span></div>
+          <div class="pause-kicker" aria-hidden="true"><i>✦</i><span></span><p>PAUSED</p><span></span><i>✦</i></div>
+          <h2>잠시 쉬어가요</h2>
+          <div class="pause-body">
+            <div class="pause-scene" aria-hidden="true">
+              <div class="pause-suitcase pause-suitcase-back"></div>
+              <div class="pause-suitcase pause-suitcase-front"><span>✈</span></div>
+              <img src="./assets/cat-frames/actions/action-sit.png?v=3" alt="" />
+              <b>✦</b>
+            </div>
+            <div class="pause-actions">
+              <p>잠시 쉬어가며 주변을 둘러보세요.<br /><strong>더 멋진 순찰이 이어집니다!</strong></p>
+              <button id="resumeButton" class="primary-button pause-button" type="button">
+                <span class="start-play" aria-hidden="true">▶</span><span>계속 탐험하기</span><span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./motion-math.js?v=2"></script>
+    <script src="./game-v2.js?v=12"></script>
+  </body>
+</html>
